@@ -31,6 +31,16 @@ app.on('activate', function() {
 })
 
 ipc.on('convert', (e, text, replaceWith) => {
+  if(text === '') {
+    electron.dialog.showMessageBox(mainWindow, {
+      type: "error",
+      title: "Error",
+      message: "Please provide a text to convert!",
+      buttons: ['OK']
+    })
+    return
+  }
+
   if(replaceWith === '')
     replaceWith = '_'
 
