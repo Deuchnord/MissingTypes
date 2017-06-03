@@ -1,0 +1,12 @@
+{
+  "name": "missingtypes",
+  "version": "1.0.0",
+  "description": "_ sm_ll s_ftw_re th_t rem_ves _ll bl__d types from _ mess_ge.",
+  "main": "index.js",
+  "repository": "https://github.com/Deuchnord/MissingTypes",
+  "author": "Jérôme Deuchnord",
+  "license": "WTFPL",
+  "dependencies": {
+    "electron": "^1.6.10"
+  }
+}
