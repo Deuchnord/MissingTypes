@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>#MissingTypes</title>
   </head>
   <body>
+
+<textarea id="initial-text" placeholder="Type here your text!"></textarea>
+<label for="replace-with">Replace with:</label>
+<input type="text" id="replace-with" placeholder="_" />
+<button type="button" id="convert-btn">Convert!</button>
+
+<div class="converted-text">
+  <h2>Your missing-typed text</h2>
+  <div id="result" class="result"></div>
+</div>
+
+<script type="text/javascript">
+  const $ = require('jquery');
+  const ipc = require('electron').ipcRenderer;
+  $('#convert-btn').click(() => {
+    ipc.send('convert', $('#initial-text').val(), $('#replace-with').val());
+  });
+
+  ipc.on('converted text', (e, text) => {
+    $('#result').text(text);
+  });
+</script>
 
   </body>
 </html>

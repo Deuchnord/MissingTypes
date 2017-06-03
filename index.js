@@ -1,4 +1,5 @@
 const electron = require('electron')
+const ipc = require('electron').ipcMain
 const app = electron.app
 
 const BrowserWindow = electron.BrowserWindow
@@ -27,4 +28,15 @@ app.on('activate', function() {
   if (mainWindow === null) {
     createWindow()
   }
+})
+
+ipc.on('convert', (e, text, replaceWith) => {
+  console.log(text);
+  if(replaceWith === '')
+    replaceWith = '_'
+
+  const converted = text.replace(/[abo]/gi, replaceWith)
+  console.log(converted);
+
+  mainWindow.webContents.send('converted text', converted)
 })
