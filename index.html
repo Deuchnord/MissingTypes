@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <title>#MissingTypes</title>
+    <link rel="stylesheet" href="missingtypes.css">
   </head>
   <body>
 
-<textarea id="initial-text" placeholder="Type here your text!"></textarea>
+<textarea id="initial-text" autofocus placeholder="Type here your text!"></textarea>
 <label for="replace-with">Replace with:</label>
 <input type="text" id="replace-with" placeholder="_" />
 <button type="button" id="convert-btn">Convert!</button>
 
-<div class="converted-text">
+<div class="converted-text hidden">
   <h2>Your missing-typed text</h2>
   <div id="result" class="result"></div>
 </div>
@@ -24,6 +25,7 @@
   });
 
   ipc.on('converted text', (e, text) => {
+    $('.converted-text').removeClass('hidden');
     $('#result').text(text);
   });
 </script>

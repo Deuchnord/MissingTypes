@@ -1,0 +1,36 @@
+body {
+  background: white;
+  margin: none;
+  padding: 10px;
+}
+
+textarea {
+  font-family: sans-serif;
+  display: block;
+  width: calc(100% - 20px);
+  height: 200px;
+  border: 1px solid #bbbbbb;
+  padding: 10px;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+#replace-with {
+  width: 50px;
+  margin-top: 5px;
+  padding: 2px 5px;
+  text-align: center;
+}
+
+button {
+  border: 1px solid #bbbbbb;
+  background: #eeeeee;
+  padding: 2px 5px;
+  outline: none
+}
+
+.hidden {
+  display: none;
+}
