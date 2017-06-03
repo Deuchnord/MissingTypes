@@ -14,6 +14,7 @@ function createWindow() {
   })
 
   mainWindow.loadURL(`file://${__dirname}/index.html`)
+  mainWindow.setMenu(null)
 
   mainWindow.on('closed', function() {
     mainWindow = null
