@@ -31,12 +31,10 @@ app.on('activate', function() {
 })
 
 ipc.on('convert', (e, text, replaceWith) => {
-  console.log(text);
   if(replaceWith === '')
     replaceWith = '_'
 
   const converted = text.replace(/[abo]/gi, replaceWith)
-  console.log(converted);
 
   mainWindow.webContents.send('converted text', converted)
 })
