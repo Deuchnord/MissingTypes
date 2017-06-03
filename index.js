@@ -34,7 +34,7 @@ ipc.on('convert', (e, text, replaceWith) => {
   if(replaceWith === '')
     replaceWith = '_'
 
-  const converted = text.replace(/[abo]/gi, replaceWith)
+  const converted = text.replace(/[aáàâäãāåboóòôöõō]/gi, replaceWith)
 
   mainWindow.webContents.send('converted text', converted)
 })
