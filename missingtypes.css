@@ -2,6 +2,7 @@ body {
   background: white;
   margin: none;
   padding: 10px;
+  font-family: sans-serif;
 }
 
 textarea {
