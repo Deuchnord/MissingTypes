@@ -1,6 +1,7 @@
 const electron = require('electron')
 const ipc = require('electron').ipcMain
 const app = electron.app
+require('electron-context-menu')()
 
 const BrowserWindow = electron.BrowserWindow
 
