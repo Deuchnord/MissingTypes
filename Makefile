@@ -18,3 +18,6 @@ darwin:
 	electron-packager . --icon=logo.ico --platform=darwin --out=builds/mac
 
 all: windows linux darwin
+
+clear:
+	rm -rf builds
