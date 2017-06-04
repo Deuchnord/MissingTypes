@@ -14,7 +14,7 @@
 
 <div class="converted-text hidden">
   <h2>Your missing-typed text</h2>
-  <div id="result" class="result"></div>
+  <textarea id="result"></textarea>
 </div>
 
 <script type="text/javascript">
@@ -26,7 +26,7 @@
 
   ipc.on('converted text', (e, text) => {
     $('.converted-text').removeClass('hidden');
-    $('#result').text(text);
+    $('#result').val(text);
   });
 </script>
 
